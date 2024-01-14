@@ -12,6 +12,7 @@
   --border: rgba(255, 255, 255, 0.5);
   --border-hover: rgba(255, 255, 255, 0.05);
   --icons-hover: rgba(255, 255, 255, 0.1);
+  --highlight-color: rgba(255, 255, 255, 0.2);
   --switch: url(./assets/moon-stars.svg);
 }
 
@@ -22,6 +23,7 @@
   --border: rgba(0, 0, 0, 0.5);
   --border-hover: rgba(0, 0, 0, 0.05);
   --icons-hover: rgba(0, 0, 0, 0.1);
+  --highlight-color: rgba(0, 0, 0, 0.1);
   --switch: url(./assets/sun.svg);
 }
 
@@ -31,6 +33,7 @@
 body {
   /*baxkground: color img repeat position/size*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 /*Aplica a mesma fonte para toda a pagina*/
@@ -73,10 +76,6 @@ body * {
 
   margin: 4px auto;
 }
-.light #Switch button {
-  right: 0;
-  left: initial;
-}
 
 #Switch button {
   width: 32px;
@@ -90,6 +89,14 @@ body * {
   top: 50%;
   transform: translateY(-50%);
   
+  animation: slide-out 0.2s;
+}
+.light #Switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#Switch button:hover{
+  outline: 8px solid var(--highlight-color);
 }
 
 #Switch span {
@@ -160,4 +167,28 @@ ul li a:hover {
 
 .social-links a:hover {
   background: var(--icons-hover);
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg)
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg)
+  }
+}
+
+@keyframes slide-in {
+  from{left: 0;}
+  to{left: 50%;}
+}
+
+@keyframes slide-out {
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
 }
