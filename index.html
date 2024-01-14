@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+  <head>
+    <!--
+      Configura a fonte a ser usada na pagina. Fonte obtida no fonts.google.com
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto</title>
+    <!--Faz a relação com o arquivo de personalização CSS-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Cria a "Caixa" onde irão ficar elementos-->
+    <div id="conteiner">
+
+      <!--parte responsavel pela foto e pelo texto logo abaixo-->
+      <div id="profile">
+        <img src="./assets/darkKitty.jpg" alt="foto de teste" />
+        <p>phtavaresleite</p>
+      </div>
+
+      <!-- Botão para trocar os modos -->
+      <div id="Switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+
+      <!--cria a lista de links. Cada item usa o comando "li" dentro do "ul". Caso seja necessario enumerar, usa o "ol"-->
+      <ul>
+        <li>
+          <!--A opção target="_blank" direciona o usuario para uma outra aba, sem que a atual feche-->
+          <a href="https://github.com/phtavaresleite" target="_blank">Veja meu portifólio</a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/ph-tavaresleite" target="_blank">Linkedin</a>
+        </li>
+      </ul>
+
+      <!-- Cria os icones com os links -->
+      <div class="social-links">
+        <a href="https://github.com/phtavaresleite" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://www.linkedin.com/in/ph-tavaresleite" target="_blank">
+        <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./script.js"></script>
+
+  </body>
+</html>
